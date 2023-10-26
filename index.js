@@ -11,11 +11,7 @@ const newspapers = [
     address: "https://www.nytimes.com/section/climate",
     base: "",
   },
-  {
-    name: "guardian",
-    address: "https://www.theguardian.com/environment/climate-crisis",
-    base: "",
-  },
+
   {
     name: "washingtonpost",
     address: "https://www.washingtonpost.com/climate-environment/",
@@ -48,7 +44,6 @@ const newspapers = [
   },
   {
     name: "bbc",
-    //address: "https://www.bbc.com/news/science_and_environment",
     address: "https://www.bbc.com/news/topics/cmj34zmwm1zt",
     base: "https://www.bbc.com",
   },
@@ -56,7 +51,7 @@ const newspapers = [
   {
     name: "reuters",
     address: "https://www.reuters.com/sustainability/climate-energy/",
-    base: "",
+    base: "https://www.reuters.com",
   },
   {
     name: "abcnews",
@@ -78,7 +73,7 @@ const newspapers = [
   {
     name: "newsweek",
     address: "https://www.newsweek.com/topic/climate-change",
-    base: "",
+    base: "ht",
   },
   {
     name: "scientificamerican",
@@ -89,6 +84,11 @@ const newspapers = [
     name: "nasa",
     address: "https://climate.nasa.gov/",
     base: "https://climate.nasa.gov",
+  },
+  {
+    name: "thesydneymorningherald",
+    address: "https://www.smh.com.au/environment/climate-change",
+    base: "https://www.smh.com.au",
   },
 ];
 
@@ -113,7 +113,7 @@ newspapers.forEach((newspaper) => {
 });
 
 app.get("/", (req, res) => {
-  res.json("Welcome to my web scraper!");
+  res.json("Welcome to my climate news scrapping app!");
 });
 
 app.get("/news", (req, res) => {
